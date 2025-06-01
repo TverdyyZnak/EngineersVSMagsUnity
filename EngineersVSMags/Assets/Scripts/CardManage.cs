@@ -71,7 +71,7 @@ public class CardManage : MonoBehaviour
         CardCollection.CardsIng.Add(new Card("E6", "LaserMan", "Sprites/IngCards/6", 2, 5, 4));
         
         CardCollection.CardsIng.Add(new Card("E6", "LaserMan", "Sprites/IngCards/6", 2, 5, 4));
-        CardCollection.CardsIng.Add(new Card("E7", "Oreshnik", "Sprites/IngCards/7", 3, 10, 9));
+        CardCollection.CardsIng.Add(new Card("E7", "Oreshnik", "Sprites/IngCards/7", 3, 15, 9));
         CardCollection.CardsIng.Add(new Card("E8", "Juggernaut", "Sprites/IngCards/8", 10, 1, 6));
         CardCollection.CardsIng.Add(new Card("E8", "Juggernaut", "Sprites/IngCards/8", 10, 1, 6));
         
@@ -82,35 +82,35 @@ public class CardManage : MonoBehaviour
 
         //Маги
 
-        CardCollection.CardsMag.Add(new Card("M1", "Neon Ninja", "Sprites/MagsCards/1", 4, 3, 3));
-        CardCollection.CardsMag.Add(new Card("M1", "Neon Ninja", "Sprites/MagsCards/1", 4, 3, 3));
-        CardCollection.CardsMag.Add(new Card("M2", "Zap Mag", "Sprites/MagsCards/2", 2, 2, 1));
-        CardCollection.CardsMag.Add(new Card("M2", "Zap Mag", "Sprites/MagsCards/2", 2, 2, 1));
+        CardCollection.CardsMag.Add(new Card("M1", "Neon Ninja", "Sprites/MagsCards/1", 5, 3, 3));
+        CardCollection.CardsMag.Add(new Card("M1", "Neon Ninja", "Sprites/MagsCards/1", 5, 3, 3));
+        CardCollection.CardsMag.Add(new Card("M2", "Zap Mag", "Sprites/MagsCards/2", 2, 2, 2));
+        CardCollection.CardsMag.Add(new Card("M2", "Zap Mag", "Sprites/MagsCards/2", 2, 2, 2));
 
+        CardCollection.CardsMag.Add(new Card("M2", "Zap Mag", "Sprites/MagsCards/2", 2, 2, 2));
         CardCollection.CardsMag.Add(new Card("M3", "Fire Mag", "Sprites/MagsCards/3", 3, 4, 3));
         CardCollection.CardsMag.Add(new Card("M3", "Fire Mag", "Sprites/MagsCards/3", 3, 4, 3));
-        CardCollection.CardsMag.Add(new Card("M3", "Fire Mag", "Sprites/MagsCards/3", 3, 4, 3));
-        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 1, 1));
+        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 2, 1));
 
-        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 1, 1));
-        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 1, 1));
-        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 1, 1));
-        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 1, 1));
+        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 2, 1));
+        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 2, 1));
+        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 2, 1));
+        CardCollection.CardsMag.Add(new Card("M4", "Light Spirit", "Sprites/MagsCards/4", 1, 2, 1));
 
-        CardCollection.CardsMag.Add(new Card("M5", "Magic Wall", "Sprites/MagsCards/5", 11, 0, 6));
-        CardCollection.CardsMag.Add(new Card("M5", "Magic Wall", "Sprites/MagsCards/5", 11, 0, 6));
-        CardCollection.CardsMag.Add(new Card("M5", "Magic Wall", "Sprites/MagsCards/5", 11, 0, 6));
-        CardCollection.CardsMag.Add(new Card("M6", "JoJo", "Sprites/MagsCards/6", 5, 11, 9));
+        CardCollection.CardsMag.Add(new Card("M5", "Magic Wall", "Sprites/MagsCards/5", 15, 0, 6));
+        CardCollection.CardsMag.Add(new Card("M5", "Magic Wall", "Sprites/MagsCards/5", 15, 0, 6));
+        CardCollection.CardsMag.Add(new Card("M5", "Magic Wall", "Sprites/MagsCards/5", 15, 0, 6));
+        CardCollection.CardsMag.Add(new Card("M6", "JoJo", "Sprites/MagsCards/6", 7, 11, 9));
 
         CardCollection.CardsMag.Add(new Card("M7", "Skeleton", "Sprites/MagsCards/7", 2, 1, 1));
         CardCollection.CardsMag.Add(new Card("M7", "Skeleton", "Sprites/MagsCards/7", 2, 1, 1));
-        CardCollection.CardsMag.Add(new Card("M8", "Harry Potter", "Sprites/MagsCards/8", 3, 4, 4));
-        CardCollection.CardsMag.Add(new Card("M8", "Harry Potter", "Sprites/MagsCards/8", 3, 4, 4));
+        CardCollection.CardsMag.Add(new Card("M8", "Harry Potter", "Sprites/MagsCards/8", 5, 4, 4));
+        CardCollection.CardsMag.Add(new Card("M8", "Harry Potter", "Sprites/MagsCards/8", 5, 4, 4));
 
-        CardCollection.CardsMag.Add(new Card("M9", "Elf Archer", "Sprites/MagsCards/9", 2, 6, 5));
-        CardCollection.CardsMag.Add(new Card("M9", "Elf Archer", "Sprites/MagsCards/9", 2, 6, 5));
-        CardCollection.CardsMag.Add(new Card("M10", "Monk", "Sprites/MagsCards/9", 4, 8, 8));
-        CardCollection.CardsMag.Add(new Card("M10", "Monk", "Sprites/MagsCards/9", 4, 8, 8));
+        CardCollection.CardsMag.Add(new Card("M9", "Elf Archer", "Sprites/MagsCards/9", 3, 5, 5));
+        CardCollection.CardsMag.Add(new Card("M9", "Elf Archer", "Sprites/MagsCards/9", 3, 5, 5));
+        CardCollection.CardsMag.Add(new Card("M10", "Monk", "Sprites/MagsCards/10", 7, 8, 8));
+        CardCollection.CardsMag.Add(new Card("M10", "Monk", "Sprites/MagsCards/10", 7, 8, 8));
 
     }
 

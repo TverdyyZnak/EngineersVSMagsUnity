@@ -10,7 +10,7 @@ public class NetworkManager : MonoBehaviour
     // === Настройки ===
     public int udpPort = 8888;
     public int tcpPort = 9999;
-    public bool isServer = true;
+    public bool isServer;
 
     private TcpListener tcpListener;
     private TcpClient tcpClient;
@@ -22,6 +22,11 @@ public class NetworkManager : MonoBehaviour
     private Thread tcpReceiveThread;
 
     public string messageFrom;
+
+    private void Awake()
+    {
+        isServer = UnionClass.isServ;
+    }
     void Start()
     {
         StartUdpBroadcast();
@@ -43,7 +48,17 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
-    void OnApplicationQuit()
+    public void OnApplicationQuit()
+    {
+        udpBroadcaster?.Close();
+        udpListenerThread?.Abort();
+        tcpListenerThread?.Abort();
+        tcpReceiveThread?.Abort();
+        tcpClient?.Close();
+        tcpListener?.Stop();
+    }
+
+    public void NetworkExit() 
     {
         udpBroadcaster?.Close();
         udpListenerThread?.Abort();
@@ -83,7 +98,7 @@ public class NetworkManager : MonoBehaviour
                 string msg = Encoding.UTF8.GetString(data);
                 if (msg == "HELLO_GAME" && remoteEP.Address.ToString() != GetLocalIPAddress())
                 {
-                    Debug.Log("[UDP] Обнаружен игрок: " + remoteEP.Address);
+                    //Debug.Log("[UDP] Обнаружен игрок: " + remoteEP.Address);
 
                     if (!isServer && tcpClient == null)
                         ConnectToServer(remoteEP.Address.ToString());

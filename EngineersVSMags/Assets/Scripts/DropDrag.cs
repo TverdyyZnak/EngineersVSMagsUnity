@@ -18,6 +18,8 @@ public class DropDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        manager.battleSocketisActive = true;
+
         transform.localScale = new Vector3((float)1.5, (float)1.5, 0);
         
         parentCardHolder = transform.parent;
@@ -53,6 +55,7 @@ public class DropDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                     manager.game.PlayerAttac.Add(card);
                     manager.game.PlayerHand.RemoveAt(i);
                     
+                    
                     // Тута ману уменьшаю
                     manager.manaTxt.text = $"{manager.tempMana - Convert.ToInt32(obj.GetComponent<CardInfo>().mana.text)}";
                     manager.tempMana -= Convert.ToInt32(obj.GetComponent<CardInfo>().mana.text);
@@ -64,17 +67,27 @@ public class DropDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                         if(Convert.ToInt32(manager.playerHand.GetChild(j).gameObject.GetComponent<CardInfo>().mana.text) > manager.tempMana) 
                         {
                             manager.playerHand.GetChild(j).GetComponent<DropDrag>().enabled = false;
+                            manager.playerHand.GetChild(j).GetComponent<CardInfo>().isCanAttack = false;
                         }
+                    }
+
+                    for (int j = 0; j < manager.playerAttac.childCount; j++) 
+                    {
+                        manager.playerAttac.GetChild(j).GetComponent<CanBeUsed>().enabled = false;
                     }
 
 
                     break;
                 }
             }
+
+            GetComponent<DropDrag>().enabled = false;
         }
 
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+  
         transform.localScale = new Vector3(1, 1, 0);
-
+        manager.battleSocketisActive = false;
 
     }
 }
